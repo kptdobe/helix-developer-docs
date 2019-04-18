@@ -32,7 +32,7 @@ strains:
     <<: *basestrain
     url: https://helix.adobelaunch.com/
     directoryIndex: README.html
-    package: acapt/e0370c553e9084a40360907cc80e50e35253202a
+    package: acapt/9f9eca005150a8149a660d24430b4cfacead3017
 
   - name: defaultDev
     <<: *devstrain
