@@ -1,0 +1,32 @@
+{
+  "name": "helix-developer-docs",
+  "version": "1.0.0",
+  "description": "Helix version of Developer Docs",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kptdobe/helix-developer-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kptdobe/helix-developer-docs/issues"
+  },
+  "homepage": "https://github.com/kptdobe/helix-developer-docs#readme",
+  "dependencies": {
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "eslint": "5.15.1",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-header": "3.0.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.12.4",
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.18.0"
+  }
+}
