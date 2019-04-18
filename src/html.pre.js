@@ -135,7 +135,7 @@ function extractLastModifiedFromCommitsHistory(commits, logger) {
  * @param {Object} logger Logger
  */
 
-const NAV_IGNORED_FOLDERS = new RegExp(/(^\.)|(^_)|(^css)|(^files)|(^images)|(^js)|(^resources)/gmi);
+const NAV_IGNORED_FOLDERS = new RegExp(/(^\.)|(^_)|(^css)|(^files)|(^images)|(^js)/gmi);
 
 async function computeNavPath(apiRoot, owner, repo, ref, path, logger) {
   logger.debug('html-pre.js - Fectching the nav'); // fetch the whole tree...
