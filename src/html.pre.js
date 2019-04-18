@@ -207,7 +207,7 @@ async function pre(payload, action) {
       logger.debug('html-pre.js - No REPO_API_ROOT provided');
     }
 
-    if (secrets.REPO_RAW_ROOT) {
+    if (secrets.REPO_API_ROOT) {
       p.content.nav = await computeNavPath(
         secrets.REPO_API_ROOT,
         actionReq.params.owner,
@@ -217,7 +217,7 @@ async function pre(payload, action) {
         logger,
       );
     } else {
-      logger.debug('html-pre.js - No REPO_RAW_ROOT provided');
+      logger.debug('html-pre.js - No REPO_API_ROOT provided');
     }
 
     return p;

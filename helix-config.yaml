@@ -14,7 +14,7 @@ definitions:
     - &defaultRepo https://github.com/kptdobe/helix-developer-docs.git#master
     - &contentRepo https://github.com/Adobe-Marketing-Cloud/reactor-developer-docs.git#master
     - &devRepo http://localhost/local/default.git
-  
+
   strains:
     base:
       &basestrain
@@ -32,6 +32,7 @@ strains:
     <<: *basestrain
     url: https://helix.adobelaunch.com/
     directoryIndex: README.html
+    package: acapt/083415d5601e992d8c56dece10a153ed7de88db2
 
   - name: defaultDev
     <<: *devstrain
