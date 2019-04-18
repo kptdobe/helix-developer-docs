@@ -135,6 +135,8 @@ function extractLastModifiedFromCommitsHistory(commits, logger) {
  * @param {Object} logger Logger
  */
 
+const NAV_IGNORED_FOLDERS = new RegExp(/(^\.)|(^_)|(^css)|(^files)|(^images)|(^js)|(^resources)/gmi);
+
 async function computeNavPath(apiRoot, owner, repo, ref, path, logger) {
   logger.debug('html-pre.js - Fectching the nav'); // fetch the whole tree...
 
@@ -153,11 +155,11 @@ async function computeNavPath(apiRoot, owner, repo, ref, path, logger) {
   json.tree.forEach((item) => {
     const p = `/${item.path}`;
 
-    if (p !== currentFolderPath && p.startsWith(currentFolderPath)) {
-      const title = p.substring(p.lastIndexOf('/') + 1, p.lastIndexOf('.'));
+    if (p !== currentFolderPath && p.startsWith(currentFolderPath) && !p.slice(1).match(NAV_IGNORED_FOLDERS)) {
+      const title = p.substring(0, p.lastIndexOf('.md') > -1 ? p.lastIndexOf('.md') : p.length);
       nav.push({
         href: p.replace(/\.md$/g, '.html'),
-        title: title.charAt(0).toUpperCase() + title.slice(1),
+        title: title
       });
     }
   });
