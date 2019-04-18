@@ -33,6 +33,10 @@ strains:
     url: https://helix.adobelaunch.com/
     directoryIndex: README.html
     package: acapt/9f9eca005150a8149a660d24430b4cfacead3017
+    
+  - name: api-docs
+    url: https://helix.adobelaunch.com/api
+    origin: https://developer.adobelaunch.com/api/
 
   - name: defaultDev
     <<: *devstrain
